@@ -64,7 +64,16 @@ $ git push
 <li>git reset 直前のコミットを取り消す</li>
 <li>git revert  作業ツリーを指定したコミット時点の状態にまで戻す</li>
 </ol>
-
+<h2>git stash</h2>
+<p>現在の作業ツリーの状態を一時的に保管する。現在作業中の内容をコミットせずに、他のブランチで作業を行うときに使う。</p>
+<pre>
+$ git stash &lt;保存名もしくはコメントなど&gt;
+</pre>
+<p>一時的に保存した状態を再度呼び出すときにはpop、リストを出す場合はlistで可能。</p>
+<pre>
+$ git stash pop
+$ git stash list
+</pre>
   <div>
     <h2>リポジトリの作成およびメンテナンスに利用するコマンド</h2>
     <ol>
@@ -90,6 +99,5 @@ $ git gc
 </pre>
     </ol>
   </div>
-
 </body>
 </html>
