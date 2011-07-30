@@ -172,5 +172,18 @@ $ git gc
 </pre>
     </ol>
   </div>
+<h2>トピックブランチ作業中に派生元(今回はdevelopment)の変更をrebseで取り込むことによって分岐を１本にする</h2>
+<ol>
+  <li>$ git checkout topicbranch</li>
+  <li># なにかファイルを編集する。しかも、この間にdevelopmentに他の人によって変更が入っている</li>
+  <li>$ git commit -a -m "topicブランチの変更をコミット"</li>
+  <li>$ git checkout development</li>
+  <li>$ git pull #developブランチの変更を取り込む</li>
+  <li>$ git checkout topicbranch</li>
+  <li>$ git rebase development  #これで、developmentのHEADにtopicbranchの変更をつなげる</li>
+  <li>$ git checkout development</li>
+  <li>$ git merge topicbranch #マージ結果はtopicbranchのHEADと同一なのでdevelopmentのマーカが移動するだけ=コミットオブジェクトができない</li>
+</ol>
+
 </body>
 </html>
