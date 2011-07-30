@@ -3,6 +3,25 @@
 </head>
 <body>
   <div>
+    <h2>リポジトリ作成</h2>
+    <ol>
+      <li>Admin-Collaborators-Addでメンバーを加える</li>
+      <li>以下のコマンドを実行する</li>
+    </ol>
+<pre>
+mkdir scmbc201107
+cd scmbc201107
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@github.com:shinodogg/scmbc201107.git
+git push -u origin master
+git branch development
+git push origin development:development
+</pre>
+  </div>
+  <div>
     <h2>リモートリポジトリをクローンする</h2>
     <ol>
       <li>作業ディレクトリへ移動する</li>
