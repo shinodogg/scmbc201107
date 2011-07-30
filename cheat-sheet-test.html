@@ -82,6 +82,44 @@ $ git push
 <li>git merge ローカルブランチのマージを行う</li>
 <li>git tag コミットにタグを付ける</li>
 </ol>
+
+<div>
+  <h2>git branch</h2>
+  <p>ブランチ情報の表示及びブランチの作成</p>
+  <pre>
+$ git branch temp01
+$ git branch
+* master
+  temp01
+</pre>
+</div>
+<div>
+  <h2>git checkout</h2>
+  <p>ブランチの切り替え</p>
+  <pre>
+ $ git checkout temp01
+Switched to branch "temp01"
+$ git branch
+  master
+* temp01
+</pre>
+</div>
+<div>
+  <h2>git show-branch</h2>
+  <p>ブランチの作成/変更/マージ履歴を表示</p>
+  <pre></pre>
+</div>
+<div>
+  <h2>git merge</h2>
+  <p>ローカルブランチのマージを行う</p>
+  <pre>$ git merge ＜変更点の取り込み元ブランチ＞</pre>
+</div>
+<div>
+  <h2>git tag</h2>
+  <p>コミットにタグを付ける</p>
+  <pre>$ git tag ＜タグ名＞</pre>
+</div>
+
 <h2>git stash</h2>
 <p>現在の作業ツリーの状態を一時的に保管する。現在作業中の内容をコミットせずに、他のブランチで作業を行うときに使う。</p>
 <pre>
@@ -92,6 +130,16 @@ $ git stash &lt;保存名もしくはコメントなど&gt;
 $ git stash pop
 $ git stash list
 </pre>
+<h2>git rebase</h2>
+<p>ブランチの派生元（上流）を変更する。</p>
+<pre>
+$ git rebase ＜派生元ブランチ＞
+</pre>
+<p>リベースの取り消し（競合発生時のみ？）</p>
+<pre>
+$ git rebase --abort
+</pre>
+
   <div>
     <h2>リポジトリの作成およびメンテナンスに利用するコマンド</h2>
     <ol>
