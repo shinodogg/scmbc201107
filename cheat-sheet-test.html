@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>1</title>
 </head>
 <body>
   <div>
@@ -52,5 +53,35 @@ $ git push
   user> git checkout topic-development
   user> git merge development
 </pre>
+
+
+
+  <div>
+    <h2>リポジトリの作成およびメンテナンスに利用するコマンド</h2>
+    <ol>
+      <li>git init	リポジトリを作成する</li>
+<pre>
+$ git init
+</pre>
+      <li>git clone	既存のリポジトリの複製を作る</li>
+<pre>
+$ git clone (クローンもとのリポジトリのURL)
+
+# http(s) httpi(s)://＜ホスト名＞[:ポート番号]/＜Gitリポジトリのパス＞
+# git://＜ホスト名＞[:ポート番号]/＜Gitリポジトリのパス＞
+</pre>
+      <li>git fsck	リポジトリの正当性チェックを行う</li>
+<pre>
+$ git fsck
+$ git fsck --full  # 完全なチェック
+</pre>
+      <li>git gc	リポジトリ内の不要なオブジェクトを削除し、最適化を行う</li>
+<pre>
+$ git gc
+</pre>
+    </ol>
+  </div>
+
+
 </body>
 </html>
